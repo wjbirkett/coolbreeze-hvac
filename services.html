@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoolBreeze HVAC — Fort Myers AC Repair & Installation</title>
-  <meta name="description" content="Fast, honest AC repair and HVAC installation in Fort Myers, FL. Family owned. Same-day service available. Free estimates." />
+  <title>HVAC Services — CoolBreeze HVAC | Fort Myers AC Repair & Installation</title>
+  <meta name="description" content="Full-service residential and commercial HVAC for Fort Myers, Cape Coral, and all of Lee County. AC repair, installation, maintenance, duct cleaning, and emergency service." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -165,7 +165,7 @@
       display: flex; align-items: center; gap: 0.5rem;
       font-size: 0.78rem; color: rgba(255,255,255,0.75); font-weight: 500;
     }
-    .trust-item::before { content: '✓'; color: var(--orange); font-weight: 700; }
+    .trust-item::before { content: '\2713'; color: var(--orange); font-weight: 700; }
 
     /* HERO CARD */
     .hero__card {
@@ -203,6 +203,37 @@
       color: var(--mute); margin-top: 0.75rem;
     }
 
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 50%, var(--blue-light) 100%);
+      position: relative; overflow: hidden;
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-hero__inner {
+      max-width: 700px; margin: 0 auto;
+      position: relative;
+    }
+    .page-hero__title {
+      font-family: var(--condensed);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero__sub {
+      font-size: 1rem; color: rgba(255,255,255,0.8);
+      line-height: 1.7; font-weight: 300;
+      max-width: 540px; margin: 0 auto;
+    }
+
     /* ── SERVICES ── */
     .services { padding: 5rem 2rem; background: var(--off); }
     .section-header { text-align: center; margin-bottom: 3rem; }
@@ -229,7 +260,6 @@
       border-radius: 6px; padding: 2rem;
       transition: all 0.2s;
       position: relative; overflow: hidden;
-      text-decoration: none; color: inherit; display: block;
     }
     .service-card::before {
       content: '';
@@ -252,6 +282,54 @@
       font-size: 0.75rem; font-weight: 700;
       color: var(--orange); letter-spacing: 0.05em;
     }
+    .service-card__bullets {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .service-card__bullets li {
+      font-size: 0.82rem;
+      color: var(--mute);
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .service-card__bullets li::before {
+      content: '\2713';
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+    .service-card__cta {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .service-card__cta:hover { color: var(--orange); }
+
+    /* ── BRANDS ── */
+    .brands { padding: 4rem 2rem; background: var(--white); }
+    .brands__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .brands__name {
+      font-family: var(--condensed);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
 
     /* ── EMERGENCY BANNER ── */
     .emergency {
@@ -273,6 +351,32 @@
       font-weight: 800; color: var(--white);
       letter-spacing: 0.02em; display: block;
       text-decoration: none; margin-bottom: 0.75rem;
+    }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta {
+      padding: 5rem 2rem;
+      background: var(--ice);
+      text-align: center;
+    }
+    .bottom-cta__inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .bottom-cta__title {
+      font-family: var(--condensed);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .bottom-cta__sub {
+      font-size: 0.95rem;
+      color: var(--mute);
+      line-height: 1.7;
+      margin-bottom: 2rem;
     }
 
     /* ── WHY US ── */
@@ -304,6 +408,20 @@
       color: var(--blue); line-height: 1;
     }
     .why__stat-label { font-size: 0.65rem; color: var(--mute); }
+    .why__points { list-style: none; margin: 1.5rem 0; }
+    .why__points li {
+      display: flex; gap: 0.75rem; align-items: start;
+      padding: 0.75rem 0; border-bottom: 1px solid var(--rule);
+      font-size: 0.88rem; color: var(--mute); line-height: 1.5;
+    }
+    .why__points li strong { color: var(--ink); display: block; margin-bottom: 0.1rem; }
+    .why__check {
+      width: 22px; height: 22px; flex-shrink: 0;
+      background: var(--ice); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; color: var(--blue); font-weight: 700;
+      margin-top: 0.1rem;
+    }
 
     /* ── TESTIMONIALS ── */
     .testimonials { padding: 5rem 2rem; background: var(--ice); }
@@ -321,23 +439,36 @@
     .testimonial__author { font-size: 0.78rem; font-weight: 600; color: var(--ink); }
     .testimonial__location { font-size: 0.72rem; color: var(--mute); }
 
-    /* ── BOTTOM CTA ── */
-    .bottom-cta {
-      padding: 5rem 2rem;
-      background: var(--blue);
-      text-align: center;
+    /* ── CONTACT ── */
+    .contact { padding: 5rem 2rem; background: var(--white); }
+    .contact__inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
     }
-    .bottom-cta__title {
-      font-family: var(--condensed);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800; text-transform: uppercase;
-      color: var(--white); margin-bottom: 0.75rem;
+    .contact__info-block {
+      display: flex; gap: 1rem; align-items: start;
+      margin-bottom: 1.5rem;
     }
-    .bottom-cta__sub {
-      font-size: 0.95rem; color: rgba(255,255,255,0.75);
-      margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;
-      line-height: 1.6;
+    .contact__icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--ice); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
     }
+    .contact__info-label { font-size: 0.72rem; font-weight: 700; color: var(--mute); text-transform: uppercase; letter-spacing: 0.08em; }
+    .contact__info-value { font-size: 0.95rem; color: var(--ink); font-weight: 500; margin-top: 0.15rem; }
+    .contact__form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact__form input, .contact__form select, .contact__form textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--rule); border-radius: 4px;
+      font-family: var(--body); font-size: 0.88rem;
+      outline: none; transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .contact__form input:focus, .contact__form select:focus, .contact__form textarea:focus { border-color: var(--blue); }
+    .contact__form textarea { min-height: 100px; resize: vertical; }
+    .contact__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
     /* ── FOOTER ── */
     footer { background: var(--blue); padding: 2.5rem 2rem; }
@@ -360,9 +491,10 @@
     @media (max-width: 900px) {
       .topbar { display: none; }
       .nav__links { display: none; }
-      .hero__inner, .why__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero__inner, .why__grid, .contact__inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .services__grid, .testimonials__grid { grid-template-columns: 1fr; }
       .hero__card { margin-top: 0; }
+      .contact__row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -378,7 +510,7 @@
     <div class="topbar__right">
       <a href="tel:2395550189">📞 (239) 555-0189</a>
       <a href="contact.html">Free Estimate</a>
-      <a href="contact.html">Emergency Service</a>
+      <a href="tel:2395550189">Emergency Service</a>
     </div>
   </div>
 
@@ -392,8 +524,8 @@
       </div>
     </a>
     <ul class="nav__links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
       <li><a href="maintenance.html">Maintenance</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -401,94 +533,119 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__inner">
-      <div>
-        <div class="hero__badge">⚡ Same-Day Service Available</div>
-        <h1 class="hero__title">Fort Myers<br><span>AC Repair</span><br>Done Right</h1>
-        <p class="hero__sub">Fast, honest HVAC service for homeowners and businesses across Lee County. No hidden fees. No upsells. Just cool air — fast.</p>
-        <div class="hero__actions">
-          <a href="tel:2395550189" class="btn btn--orange">📞 Call (239) 555-0189</a>
-          <a href="contact.html" class="btn btn--white">Get Free Estimate</a>
-        </div>
-        <div class="hero__trust">
-          <span class="trust-item">Licensed & Insured</span>
-          <span class="trust-item">Family Owned Since 2008</span>
-          <span class="trust-item">Same-Day Available</span>
-          <span class="trust-item">Free Estimates</span>
-        </div>
-      </div>
-      <div class="hero__card">
-        <div class="hero__card-title">Request Service</div>
-        <div class="hero__card-sub">We'll call you back within 30 minutes</div>
-        <form class="card-form" onsubmit="handleForm(event, 'hero-success')">
-          <input type="text" placeholder="Your Name" required />
-          <input type="tel" placeholder="Phone Number" required />
-          <select required>
-            <option value="">What do you need?</option>
-            <option>AC Repair — Not cooling</option>
-            <option>AC Repair — Not turning on</option>
-            <option>AC Installation / Replacement</option>
-            <option>Maintenance / Tune-up</option>
-            <option>Duct cleaning or repair</option>
-            <option>Emergency service</option>
-            <option>Free estimate / Other</option>
-          </select>
-          <button type="submit">GET FAST SERVICE →</button>
-          <div id="hero-success" style="display:none; background:var(--ice); padding:0.75rem; border-radius:4px; text-align:center; font-size:0.82rem; color:var(--blue); font-weight:600;">✓ Request received! We'll call you within 30 minutes.</div>
-        </form>
-        <p class="card-guarantee">🔒 No obligation · Free estimates · No hidden fees</p>
-      </div>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <h1 class="page-hero__title">HVAC Services</h1>
+      <p class="page-hero__sub">Full-service residential and commercial HVAC for Fort Myers, Cape Coral, and all of Lee County.</p>
     </div>
   </section>
 
-  <!-- SERVICES OVERVIEW -->
+  <!-- SERVICES -->
   <section class="services">
     <div class="section-header">
       <span class="section-label">What We Do</span>
-      <h2 class="section-title">HVAC Services</h2>
+      <h2 class="section-title">Our Full Range of Services</h2>
     </div>
     <div class="services__grid">
-      <a href="services.html" class="service-card">
+
+      <div class="service-card">
         <div class="service-card__icon">🔧</div>
         <div class="service-card__title">AC Repair</div>
-        <div class="service-card__desc">Not cooling? Strange noises? AC won't turn on? We diagnose and repair all makes and models — same day whenever possible.</div>
-        <span class="service-card__price">SAME-DAY AVAILABLE</span>
-      </a>
-      <a href="services.html" class="service-card">
+        <div class="service-card__desc">Not cooling? Strange noises? AC won't turn on? We diagnose and repair all makes and models — same day whenever possible. No repair is too big or too small.</div>
+        <ul class="service-card__bullets">
+          <li>All makes and models</li>
+          <li>Diagnostic fee waived with repair</li>
+          <li>90-day repair guarantee</li>
+        </ul>
+        <a href="contact.html" class="service-card__cta">Schedule Repair →</a>
+      </div>
+
+      <div class="service-card">
         <div class="service-card__icon">🏠</div>
         <div class="service-card__title">AC Installation</div>
-        <div class="service-card__desc">New construction, replacement, or upgrade — we install all major brands. We'll recommend the right system for your home and budget.</div>
-        <span class="service-card__price">FREE ESTIMATE</span>
-      </a>
-      <a href="maintenance.html" class="service-card">
+        <div class="service-card__desc">New construction, replacement, or upgrade — we install all major brands including Carrier, Trane, Lennox, and Rheem. We'll recommend the right system for your home and budget.</div>
+        <ul class="service-card__bullets">
+          <li>Carrier, Trane, Lennox, Rheem</li>
+          <li>Right-sized for your home</li>
+          <li>Financing options available</li>
+        </ul>
+        <a href="contact.html" class="service-card__cta">Get Free Estimate →</a>
+      </div>
+
+      <div class="service-card">
         <div class="service-card__icon">🛡️</div>
         <div class="service-card__title">Maintenance Plans</div>
-        <div class="service-card__desc">Twice-yearly tune-ups keep your system running efficiently, extend equipment life, and catch problems before they become emergencies.</div>
-        <span class="service-card__price">FROM $129/YEAR</span>
-      </a>
-      <a href="services.html" class="service-card">
+        <div class="service-card__desc">Twice-yearly tune-ups keep your system running efficiently, extend equipment life, and catch problems before they become emergencies. Plans start at $129/yr.</div>
+        <ul class="service-card__bullets">
+          <li>Twice-yearly tune-ups</li>
+          <li>Priority scheduling</li>
+          <li>Extends equipment life</li>
+        </ul>
+        <a href="maintenance.html" class="service-card__cta">View Plans →</a>
+      </div>
+
+      <div class="service-card">
         <div class="service-card__icon">🌬️</div>
         <div class="service-card__title">Duct Cleaning</div>
-        <div class="service-card__desc">Dirty ducts reduce efficiency and air quality. Our full duct cleaning service removes allergens, dust, and mold buildup.</div>
-        <span class="service-card__price">FROM $299</span>
-      </a>
-      <a href="services.html" class="service-card">
+        <div class="service-card__desc">Dirty ducts reduce efficiency and air quality. Our full duct cleaning service removes allergens, dust, and mold buildup — usually completed in 2-3 hours.</div>
+        <ul class="service-card__bullets">
+          <li>Improves air quality</li>
+          <li>Reduces allergens & dust</li>
+          <li>Usually completed in 2-3 hours</li>
+        </ul>
+        <a href="contact.html" class="service-card__cta">Schedule Cleaning →</a>
+      </div>
+
+      <div class="service-card">
         <div class="service-card__icon">🏢</div>
         <div class="service-card__title">Commercial HVAC</div>
-        <div class="service-card__desc">Restaurants, retail, offices, and multi-unit properties — we service commercial systems of all sizes across Lee County.</div>
-        <span class="service-card__price">FREE QUOTE</span>
-      </a>
-      <a href="services.html" class="service-card">
+        <div class="service-card__desc">Restaurants, retail, offices, and multi-unit properties — we service commercial systems of all sizes across Lee County. Service contracts available.</div>
+        <ul class="service-card__bullets">
+          <li>Restaurants, retail, offices</li>
+          <li>Multi-unit properties</li>
+          <li>Service contracts available</li>
+        </ul>
+        <a href="contact.html" class="service-card__cta">Get a Quote →</a>
+      </div>
+
+      <div class="service-card">
         <div class="service-card__icon">⚡</div>
         <div class="service-card__title">Emergency Service</div>
-        <div class="service-card__desc">AC down in the Florida heat? We offer emergency same-day service. Call us anytime — we'll get someone out to you fast.</div>
-        <span class="service-card__price">CALL NOW</span>
-      </a>
+        <div class="service-card__desc">AC down in the Florida heat? We offer emergency same-day service. Call us anytime — we'll get someone out to you as fast as possible.</div>
+        <ul class="service-card__bullets">
+          <li>Same-day response</li>
+          <li>All of Lee County</li>
+          <li>No overtime surprises</li>
+        </ul>
+        <a href="tel:2395550189" class="service-card__cta">Call Now →</a>
+      </div>
+
     </div>
-    <div style="text-align:center; margin-top:2.5rem;">
-      <a href="services.html" class="btn btn--outline">View All Services →</a>
+  </section>
+
+  <!-- BRANDS WE SERVICE -->
+  <section class="brands">
+    <div class="section-header">
+      <span class="section-label">Trusted Brands</span>
+      <h2 class="section-title">Brands We Service</h2>
+    </div>
+    <div class="brands__list">
+      <span class="brands__name">Carrier</span>
+      <span class="brands__name">·</span>
+      <span class="brands__name">Trane</span>
+      <span class="brands__name">·</span>
+      <span class="brands__name">Lennox</span>
+      <span class="brands__name">·</span>
+      <span class="brands__name">Rheem</span>
+      <span class="brands__name">·</span>
+      <span class="brands__name">Goodman</span>
+      <span class="brands__name">·</span>
+      <span class="brands__name">Daikin</span>
+      <span class="brands__name">·</span>
+      <span class="brands__name">Amana</span>
+      <span class="brands__name">·</span>
+      <span class="brands__name">York</span>
     </div>
   </section>
 
@@ -502,69 +659,13 @@
     </div>
   </div>
 
-  <!-- WHY US (teaser) -->
-  <section class="why">
-    <div class="why__grid">
-      <div class="why__img">
-        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="CoolBreeze HVAC technician" />
-        <div class="why__stats">
-          <div class="why__stat">
-            <div class="why__stat-num">15+</div>
-            <div class="why__stat-label">Years serving<br>Lee County</div>
-          </div>
-          <div class="why__stat">
-            <div class="why__stat-num">98%</div>
-            <div class="why__stat-label">Customer<br>satisfaction</div>
-          </div>
-          <div class="why__stat">
-            <div class="why__stat-num">2,400+</div>
-            <div class="why__stat-label">Jobs<br>completed</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <span class="section-label">Why CoolBreeze</span>
-        <h2 class="section-title" style="font-size:2.5rem; margin-bottom:1rem;">Honest HVAC.<br>No Surprises.</h2>
-        <p style="font-size:0.9rem; color:var(--mute); line-height:1.7; margin-bottom:0.5rem;">We started CoolBreeze in 2008 because we were tired of seeing homeowners get overcharged and oversold by big HVAC companies. We're a family business — and we treat your home like it's ours.</p>
-        <p style="font-size:0.9rem; color:var(--mute); line-height:1.7; margin-bottom:1.5rem;">Upfront pricing, licensed techs, and a 1-year warranty on every repair. That's the CoolBreeze promise.</p>
-        <a href="about.html" class="btn btn--outline">Learn More About Us →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="section-header">
-      <span class="section-label">What Customers Say</span>
-      <h2 class="section-title">Real Reviews</h2>
-    </div>
-    <div class="testimonials__grid">
-      <div class="testimonial">
-        <div class="testimonial__stars">★★★★★</div>
-        <div class="testimonial__text">"AC went out on a Saturday afternoon in July. Called CoolBreeze and they had a tech at my house within 2 hours. Fixed the capacitor, explained exactly what happened, and charged a fair price. Will never use anyone else."</div>
-        <div class="testimonial__author">Sandra M.</div>
-        <div class="testimonial__location">Cape Coral, FL</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__stars">★★★★★</div>
-        <div class="testimonial__text">"I called three companies before CoolBreeze. The others quoted me a full replacement. CoolBreeze fixed it for $285. Honest, professional, and fast. That kind of integrity is rare — they have a customer for life."</div>
-        <div class="testimonial__author">James R.</div>
-        <div class="testimonial__location">Fort Myers, FL</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__stars">★★★★★</div>
-        <div class="testimonial__text">"Been using CoolBreeze for our restaurant's HVAC for 4 years. They're always responsive, always honest about what we need, and their maintenance plan has saved us from several potential disasters. Highly recommend for commercial."</div>
-        <div class="testimonial__author">Rosa T.</div>
-        <div class="testimonial__location">Bonita Springs, FL</div>
-      </div>
-    </div>
-  </section>
-
   <!-- BOTTOM CTA -->
   <section class="bottom-cta">
-    <div class="bottom-cta__title">Ready for Cool Air?</div>
-    <p class="bottom-cta__sub">Get a free estimate with no obligation. We respond fast — usually within 30 minutes during business hours.</p>
-    <a href="contact.html" class="btn btn--orange">Get a Free Estimate →</a>
+    <div class="bottom-cta__inner">
+      <h2 class="bottom-cta__title">Not Sure What You Need?</h2>
+      <p class="bottom-cta__sub">No problem. Tell us what's going on and we'll recommend the right service. Free estimates, no obligation, no pressure.</p>
+      <a href="contact.html" class="btn btn--orange">Get a Free Estimate →</a>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -573,7 +674,6 @@
       <div class="footer__logo">❄️ CoolBreeze HVAC</div>
       <ul class="footer__links">
         <li><a href="services.html">Services</a></li>
-        <li><a href="maintenance.html">Maintenance</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="about.html#reviews">Reviews</a></li>
         <li><a href="contact.html">Contact</a></li>

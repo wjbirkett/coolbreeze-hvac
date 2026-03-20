@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — CoolBreeze HVAC | Fort Myers AC Repair</title>
+  <meta name="description" content="Contact CoolBreeze HVAC for fast, honest AC repair and installation in Fort Myers, FL. Free estimates. Same-day service available. Call (239) 555-0189." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #0A4F7A;
+      --blue-mid: #1570A6;
+      --blue-light: #2892CE;
+      --ice: #E8F4FB;
+      --ice-dark: #C8E4F4;
+      --orange: #F57C2B;
+      --orange-dark: #D96820;
+      --white: #FFFFFF;
+      --off: #F7FAFC;
+      --ink: #0D1B2A;
+      --mute: #556778;
+      --rule: #D1E2EE;
+      --condensed: 'Barlow Condensed', sans-serif;
+      --body: 'Barlow', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--body); color: var(--ink); background: var(--white); overflow-x: hidden; }
+
+    /* ── DEMO BANNER ── */
+    .demo-banner {
+      background: var(--orange);
+      color: var(--white);
+      text-align: center;
+      padding: 0.55rem 1rem;
+      font-size: 0.75rem; font-weight: 500;
+    }
+    .demo-banner a { color: var(--white); font-weight: 700; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--blue);
+      padding: 0.5rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+    .topbar__left { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+    .topbar__right { display: flex; gap: 1.5rem; }
+    .topbar__right a {
+      font-size: 0.75rem; color: rgba(255,255,255,0.85);
+      text-decoration: none; font-weight: 500;
+    }
+    .topbar__right a:hover { color: var(--white); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(10,79,122,0.08);
+    }
+    .nav__logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      text-decoration: none; padding: 1rem 0;
+    }
+    .nav__logo-icon {
+      width: 38px; height: 38px;
+      background: var(--blue);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .nav__logo-text { font-family: var(--condensed); font-weight: 700; font-size: 1.2rem; color: var(--blue); line-height: 1; }
+    .nav__logo-sub { font-size: 0.65rem; color: var(--mute); font-weight: 400; }
+    .nav__links { display: flex; gap: 0; list-style: none; }
+    .nav__links a {
+      display: block; padding: 1.25rem 1rem;
+      font-size: 0.82rem; font-weight: 500;
+      color: var(--mute); text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .nav__links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+    .nav__links a.active { color: var(--blue); border-bottom-color: var(--blue); }
+    .nav__cta {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 0.65rem 1.25rem !important;
+      border-radius: 4px;
+      border-bottom: none !important;
+      margin-left: 1rem;
+      font-weight: 600 !important;
+    }
+    .nav__cta:hover { background: var(--orange-dark) !important; border-bottom: none !important; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 50%, var(--blue-light) 100%);
+      position: relative; overflow: hidden;
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-hero__inner {
+      max-width: 700px; margin: 0 auto;
+      position: relative;
+    }
+    .page-hero__title {
+      font-family: var(--condensed);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .page-hero__sub {
+      font-size: 1rem; color: rgba(255,255,255,0.8);
+      line-height: 1.7; font-weight: 300;
+      max-width: 560px; margin: 0 auto;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.85rem 1.75rem;
+      font-family: var(--body); font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; border-radius: 4px;
+      transition: all 0.2s; cursor: pointer; border: none;
+    }
+    .btn--orange { background: var(--orange); color: var(--white); }
+    .btn--orange:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(245,124,43,0.4); }
+    .btn--white { background: var(--white); color: var(--blue); }
+    .btn--white:hover { background: var(--ice); }
+    .btn--outline { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
+    .btn--outline:hover { background: var(--blue); color: var(--white); }
+    .btn--full { width: 100%; justify-content: center; }
+
+    /* ── SECTION HEADER ── */
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-label {
+      font-family: var(--condensed);
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--orange); display: block; margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: var(--condensed);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; text-transform: uppercase;
+      color: var(--blue); line-height: 1;
+    }
+
+    /* ── CONTACT ── */
+    .contact { padding: 5rem 2rem; background: var(--white); }
+    .contact__inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+    .contact__info-block {
+      display: flex; gap: 1rem; align-items: start;
+      margin-bottom: 1.5rem;
+    }
+    .contact__icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--ice); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .contact__info-label { font-size: 0.72rem; font-weight: 700; color: var(--mute); text-transform: uppercase; letter-spacing: 0.08em; }
+    .contact__info-value { font-size: 0.95rem; color: var(--ink); font-weight: 500; margin-top: 0.15rem; }
+    .contact__form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact__form input, .contact__form select, .contact__form textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--rule); border-radius: 4px;
+      font-family: var(--body); font-size: 0.88rem;
+      outline: none; transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .contact__form input:focus, .contact__form select:focus, .contact__form textarea:focus { border-color: var(--blue); }
+    .contact__form textarea { min-height: 100px; resize: vertical; }
+    .contact__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* ── MAP / SERVICE AREA SECTION ── */
+    .map-section {
+      background: var(--ice);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .map-section__inner {
+      max-width: 800px; margin: 0 auto;
+    }
+    .map-section__title {
+      font-family: var(--condensed);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 1rem;
+    }
+    .map-section__cities {
+      font-size: 1rem; color: var(--mute);
+      line-height: 2; font-weight: 400;
+    }
+
+    /* ── EMERGENCY BANNER ── */
+    .emergency {
+      background: var(--orange);
+      padding: 2rem;
+      text-align: center;
+    }
+    .emergency__inner { max-width: 700px; margin: 0 auto; }
+    .emergency__title {
+      font-family: var(--condensed);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800; text-transform: uppercase;
+      color: var(--white); margin-bottom: 0.5rem;
+    }
+    .emergency__sub { font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; }
+    .emergency__number {
+      font-family: var(--condensed);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800; color: var(--white);
+      letter-spacing: 0.02em; display: block;
+      text-decoration: none; margin-bottom: 0.75rem;
+    }
+
+    /* ── FOOTER ── */
+    footer { background: var(--blue); padding: 2.5rem 2rem; }
+    .footer__inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer__logo {
+      font-family: var(--condensed);
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--white);
+    }
+    .footer__links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer__links a:hover { color: var(--white); }
+    .footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.3); width: 100%; text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .topbar { display: none; }
+      .nav__links { display: none; }
+      .contact__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact__row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-banner">
+    ✦ Demo site built by <a href="https://websitesbywillie.com" target="_blank">Websites by Willie</a> — want one like this? <a href="https://websitesbywillie.com/#contact" target="_blank">Let's talk →</a>
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span class="topbar__left">📍 Serving Fort Myers, Cape Coral, Bonita Springs & all of Lee County</span>
+    <div class="topbar__right">
+      <a href="tel:2395550189">📞 (239) 555-0189</a>
+      <a href="#contact-form">Free Estimate</a>
+      <a href="#">Emergency Service</a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-icon">❄️</div>
+      <div>
+        <div class="nav__logo-text">CoolBreeze HVAC</div>
+        <div class="nav__logo-sub">Fort Myers, FL · Licensed & Insured</div>
+      </div>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="maintenance.html">Maintenance</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="tel:2395550189" class="nav__cta">📞 Call Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <h1 class="page-hero__title">Contact Us</h1>
+      <p class="page-hero__sub">Free estimates. Fast response. No obligation. We'll get back to you within 30 minutes.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact-form">
+    <div class="contact__inner">
+      <div>
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title" style="font-size:2.5rem; margin-bottom:1rem;">Free Estimate.<br>No Obligation.</h2>
+        <p style="font-size:0.88rem; color:var(--mute); line-height:1.7; margin-bottom:2rem;">Call us, fill out the form, or text us. We respond fast — usually within 30 minutes during business hours.</p>
+        <div class="contact__info-block">
+          <div class="contact__icon">📞</div>
+          <div><div class="contact__info-label">Phone</div><div class="contact__info-value">(239) 555-0189</div></div>
+        </div>
+        <div class="contact__info-block">
+          <div class="contact__icon">📍</div>
+          <div><div class="contact__info-label">Service Area</div><div class="contact__info-value">Fort Myers, Cape Coral, Bonita Springs, Estero, Naples, Lehigh Acres</div></div>
+        </div>
+        <div class="contact__info-block">
+          <div class="contact__icon">🕐</div>
+          <div><div class="contact__info-label">Hours</div><div class="contact__info-value">Mon–Fri 7am–7pm · Sat 8am–5pm · Emergency available</div></div>
+        </div>
+        <div class="contact__info-block">
+          <div class="contact__icon">✉️</div>
+          <div><div class="contact__info-label">Email</div><div class="contact__info-value">service@coolbreezeswfl.com</div></div>
+        </div>
+      </div>
+      <div>
+        <form class="contact__form" onsubmit="handleForm(event, 'contact-success')">
+          <div class="contact__row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+          <input type="email" placeholder="Email Address" />
+          <select required>
+            <option value="">Service Needed</option>
+            <option>AC Repair</option>
+            <option>AC Installation / Replacement</option>
+            <option>Maintenance Plan</option>
+            <option>Duct Cleaning</option>
+            <option>Commercial HVAC</option>
+            <option>Emergency Service</option>
+            <option>Other / Not Sure</option>
+          </select>
+          <textarea placeholder="Describe the issue or what you need — any details help us prepare..."></textarea>
+          <button type="submit" class="btn btn--orange btn--full">Send Request — We'll Call You Back Fast</button>
+          <div id="contact-success" style="display:none; background:var(--ice); padding:1rem; border-radius:4px; text-align:center; font-size:0.85rem; color:var(--blue); font-weight:600;">✓ Message received! We'll be in touch within 30 minutes.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA MAP SECTION -->
+  <section class="map-section">
+    <div class="map-section__inner">
+      <span class="section-label">Where We Work</span>
+      <h2 class="map-section__title">Proudly Serving Lee County, Florida</h2>
+      <p class="map-section__cities">Fort Myers · Cape Coral · Bonita Springs · Estero · Naples · Lehigh Acres</p>
+    </div>
+  </section>
+
+  <!-- EMERGENCY BANNER -->
+  <div class="emergency">
+    <div class="emergency__inner">
+      <div class="emergency__title">AC Down in the Florida Heat?</div>
+      <div class="emergency__sub">We offer same-day emergency service across Fort Myers, Cape Coral, and all of Lee County.</div>
+      <a href="tel:2395550189" class="emergency__number">(239) 555-0189</a>
+      <a href="tel:2395550189" class="btn btn--white">Call Now — We Answer Fast</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer__inner">
+      <div class="footer__logo">❄️ CoolBreeze HVAC</div>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="maintenance.html">Maintenance</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer__copy">© 2025 CoolBreeze HVAC · Fort Myers, FL · Licensed & Insured · Built by <a href="https://websitesbywillie.com" style="color:rgba(255,255,255,0.4)">Websites by Willie</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function handleForm(e, successId) {
+      e.preventDefault();
+      document.getElementById(successId).style.display = 'block';
+      e.target.querySelectorAll('button[type=submit]').forEach(b => { b.disabled = true; b.textContent = '✓ Sent!'; });
+    }
+  </script>
+</body>
+</html>
